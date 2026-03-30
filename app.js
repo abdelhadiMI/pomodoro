@@ -3,9 +3,20 @@ const startBtn = document.querySelector(".btn-start");
 const session = document.querySelector(".minutes");
 let myInterval;
 let state = true;
+const form = document.querySelector("#form");
+const input = document.querySelector("#timeInput");
+
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // prevent page reload
+
+  let value = input.value;
+  console.log(value);
+});
 
 const appTimer = () => {
-  const sessionAmount = Number.parseInt(session.textContent);
+
+  let sessionAmount = Number.parseInt(input.textContent);
 
   if (state) {
     state = false;
