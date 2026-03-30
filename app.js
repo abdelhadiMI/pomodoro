@@ -40,3 +40,5 @@ const appTimer = () => {
 };
 
 startBtn.addEventListener("click", appTimer);
+
+ alert("weee chiiikh");
